@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/**** FOOTER ******************************************/
+
+footer {
+    width: 100%;
+    background-color: lightgray;
+    padding: 60px 0;
+}
+
+footer a {
+    color: #333;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+footer .sitemap {
+    /* outline: 1px solid red; */
+    margin-bottom: 30px;
+    
+}
+
+footer .sitemap .mapbox {
+    /* outline: 1px solid blue; */
+    width: 16.66%;
+    float: left;
+}
+
+footer .sitemap .mapbox h3 {
+
+    color: rgb(207,102,26);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "merriweather", serif;
+    margin-bottom: 20px;
+
+}
+
+footer .sitemap .mapbox ul li {
+    float: none;
+    line-height: 30px;
+}
+
+footer .footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+
+    position: relative;
+}
+
+footer .footer-bottom .links {
+    margin-bottom: 20px;
+}
+
+footer .footer-bottom .links a {
+    display: inline-block;
+    margin-right: 8px;
+    padding-right:10px;
+
+    position: relative;
+}
+
+footer .footer-bottom .links a::after {
+
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #333;
+    display: block;
+
+    position: absolute;
+    top: 2px;
+    left: 100%;
+}
+
+footer .footer-bottom .links a:last-child::after {
+    display: none;
+}
+
+footer .footer-bottom .sns {
+    position: absolute;
+    right: 0;
+    top: 31px;
+}
+
+footer .footer-bottom .sns a {
+    width: 40px;
+    height: 40px;
+
+    float: left;
+    margin-left: 10px;
+    font-size: 0;
+}
+
+footer .footer-bottom .sns a img {
+    width: 100%;
+    display: block;
+}
+
+/* sns icon - 배경 이미지로 삽입 */
+
+footer .footer-bottom .sns a:nth-child(2) {
+    background-image: url(../img/ico_sns.png);
+    background-position: 40px;
+}
+
+footer .footer-bottom .sns a:nth-child(3) {
+    background-image: url(../img/ico_blog_hover.png);
+    background-repeat: no-repeat;
+
+}
+
+footer .footer-bottom .sns a:nth-child(3):hover {
+    background-position: right;
+}
+
+footer .footer-bottom .sns a:nth-child(4) {
+    background-image: url(../img/ico_twitter_hover.png);
+    background-repeat: no-repeat;
+   
+}
+
+footer .footer-bottom .sns a:nth-child(4):hover {
+    background-position: right;
+}
+
+
+

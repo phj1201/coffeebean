@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+/* reset 설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    /* background-color: gainsboro; */
+}
+
+.detail-content {
+    /* background-color: mistyrose; */
+    margin-bottom: 150px;
+}
+
+.detail-content .title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.detail-content .title h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.detail-content .title .des {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.detail-content .title .keyword span {
+    font-size: 18px;
+    background-color: rgb(244, 153, 120);
+    padding: 6px 12px;
+    border-radius: 30px;
+
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 6px;
+    color: #fff;
+}
+
+.detail-content .main-img {
+    /* outline: 2px lightblue; */
+    width: 80%;
+    margin: 0 auto 80px;
+    max-width: 1000px;
+}
+
+.detail-content .main-img img{
+    width: 100%
+}
+
+.detail-content .back {
+    border: 3px solid rgb(244, 153, 120);
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50px;
+    color: rgb(244, 153, 120);
+    margin: 0 auto;
+
+}
+
+.detail-content .back:hover {
+    background-color: rgb(244, 153, 120);
+    color: white;
+    font-weight: 600;
+}
+
+
+
+

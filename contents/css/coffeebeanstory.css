@@ -1,0 +1,488 @@
+@charset "utf-8";
+
+/* COFFEEBEANSTORY.CSS **********************************************/
+
+@import url(/css/header.css); /* '/'루트폴더 기준 */
+@import url(/css/footer.css);
+
+
+/* .breadcrumb ******************************************************/
+
+.breadcrumb {
+
+    background-color: rgb(105,81,157);
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 140px;
+
+}
+
+/* .breadcrum width 100%; content 너비 설정 .inner 추가 */
+    
+/*   width: 1280px;
+    margin: 0 auto; -컨텐츠 너비 설정 common.css에 있는거 연결
+*/
+
+.breadcrumb ul li {
+    /* outline: 1px solid red; */
+    margin-right: 20px;
+    background: url(../img/img_arr_location.png) no-repeat right;
+    padding-right: 24px;
+}
+
+
+.breadcrumb ul li:last-child {
+    background: none;
+    padding-right: 0;
+}
+
+/* 100%일 때는 원하는 위치에 있으나 비율을 달리 했을 때는 위치가 이동됨..???
+    콘텐츠 너비 값 설정 및 여백 설정
+*/
+
+
+.breadcrumb ul li a {
+    color: white;
+    
+}
+
+.breadcrumb ul li a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+/* main ***************************************************************************************/
+
+main {
+    width: 100%;
+    max-width: 1920px; /* 화면 비율 줄였을 때도 화면 너비 고정 */
+    margin: 0 auto 60px;
+}
+
+main img {
+    width: 100%;
+    display: block;
+}
+
+/* section article 1 ***************************************************************************/
+
+/* value-list **********************************************************************************/
+
+article.value {
+   margin-bottom: 80px;
+   
+}
+
+article.value .value-list {
+
+    width: 1280px;
+    margin: 0 auto 50px;
+    border-bottom: 1px solid rgb(124,81,161);
+    padding-bottom: 50px;
+
+}
+
+/* 1) 가상요소 after에 배경이미지 처리 */
+
+
+
+article.value .value-list li {
+    /* outline: 1px solid blue; */
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+
+article.value .value-list li~li::after {
+
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background: url(../img/bg_plus_icon.gif) no-repeat;
+
+    position: absolute;
+    left: -20px;
+    top: 60px;
+}
+
+/* 2) width, margin으로 조정 */
+
+/* article.value .value-list li {
+    outline: 1px solid red;
+    text-align: center;
+    width: 340px;
+    background: url(../img/bg_plus_icon.gif) no-repeat 0 60px;
+    
+    margin: 0 -20px;
+}
+
+article.value .value-list li:first-child {
+    background: none;
+} */
+
+article.value .value-list li img {
+    margin-bottom: 25px;
+}
+
+article.value .value-list li .txt-box {
+    padding: 0 20px;
+}
+
+
+article.value .value-list li .txt-box, .value .value-list li dl {
+    /* background-color: lightcyan; */
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 1.5rem;
+    
+}
+
+article.value .value-list li .txt-box h3, article.value .value-list li dt {
+    color: rgb(124,81,161);
+    font-family: "merriweather", serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+article.value .value-list li dl dd.point {
+
+    color: rgb(124,81,161);
+
+    font-family: "merriweather", serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-top: 10px;
+    letter-spacing: -0.6px;
+}
+
+
+/* value-des/conclusion **************************************************************************/
+
+article.value .value-des {
+    
+    text-align: center;
+
+}
+
+article.value .value-des p {
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.8rem;
+    font-size: 20px;
+}
+
+article.value .value-des .conclusion {
+    color:rgb(207,102,26);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* section article 2 ******************************************************************************/
+/* section article 2 specialty *****************************************************************************/
+
+
+article.specialty {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto 80px;
+
+}
+
+article .specialty img {
+    width: 100%;
+    display: block;
+}
+
+/* section article 3 product **********************************************************************/
+
+article.product .coffee {
+    width: 1280px;
+    margin: 0 auto 80px;
+}
+
+article.product .tea {
+    width: 100%;
+    background-color: rgb(234,216,192);
+    padding: 80px 0;
+
+}
+
+article.product .tea .title span {
+    background-color: rgb(234,216,192);
+}
+
+
+
+
+/* coffee & tea 공통 디자인 적용 */
+
+/* article.product > article {
+    width: 1280px;
+    margin: 0 auto 80px;
+} 
+*/
+
+article.product .title {
+    font-family: "merriweather", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: rgb(207,102,26);
+    margin-bottom: 20px;
+    text-align: center;
+
+    background: url(../img/bg_bar6.gif) repeat-x center;
+}
+
+article.product .title span {
+    background-color: white;
+    padding: 0 30px;
+}
+
+article.product .sub-title {
+    color: rgb(207,102,26);
+    font-family: "merriweather", serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    color: rgb(51,51,51);
+    line-height: 1.4;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+article.product .description {
+  
+    font-weight: 400;
+    font-size: 18px;
+
+    color: rgb(51,51,51);
+    line-height: 1.4;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+article.product .img-list {
+  
+    margin-bottom: 60px;
+}
+
+article.product .img-list li {
+    /* outline: 2px solid red; */
+    width: 32%;
+    overflow: hidden;
+}
+
+article.product .img-list li~li {
+    margin-left: 2%;
+}
+
+article.product .img-list li img {
+    width: 100%;
+    transition: all 0.6s;
+    display: block; /* 이미지는 인라인 요소라서 block으로 바꾸어야 기본 적용된 여백 없어짐 */
+}
+
+article.product .img-list li:hover img {
+    transform: scale(1.2);
+}
+
+article.product .btn { /* block */
+    text-align: center;
+}
+
+article.product .btn a { /* inline */
+
+    color: white;
+    background-color: rgb(243,130,0);
+    display: inline-block;
+
+    font-size: 18px;
+    font-family: "merriweather", serif;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    color: rgb(255,255,255);
+
+}
+
+/* 
+div 태그 안에 a 태그가 있는 거라서 a 태그가 인라인 요소인 것을 활용하여 text-align 설정 
+a 태그는 div 블록 안에서만 움직임
+*/
+
+
+/* 
+
+.coffee {
+  
+    width: 1280px;
+    margin: 60px auto 0;
+
+}
+
+.coffee .title, .coffee .sub-title {
+    background-color: lightyellow;
+    font-family: "merriweather", serif;
+    color: rgb(207,102,26);
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.coffee .title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.coffee .sub-title {
+    font-size: 18px;
+}
+
+.coffee .description {
+    background-color: lightyellow;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 16px;
+}
+
+.coffee .img-list {
+    width: 100%;
+    
+}
+
+.coffee .img-list li{
+    
+    width: 32%;
+    overflow: hidden;
+}
+
+.coffee .img-list li:nth-child(even) {
+    margin: 0 2%;
+}
+
+.coffee .img-list li img {
+    width: 100%;
+    display: block;
+}
+
+.coffee .img-list li img:hover {
+    transform: scale(1.2);
+    transition: all 0.7s;
+}
+
+.coffee .btn {
+
+    background-color: rgb(243,130,0);
+    display: inline-block;
+
+    margin: 50px 0;
+
+
+}
+
+.coffee .btn:hover {
+    background-color: chocolate;
+}
+
+.coffee .btn a {
+    color: white;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-family: "merriweather", serif;
+    font-size: 20px;
+}
+
+
+
+*/
+
+
+/* section article 2 tea ********************************************************************************/
+/* 
+.tea {
+    width: 1280px;
+    margin: 140px auto 0;
+}
+
+.tea .title, .tea .sub-title {
+    font-family: "merriweather", serif;
+    color: rgb(207,102,26);
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.tea .title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.tea .sub-title {
+    font-size: 18px;
+}
+
+.tea .description {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 16px;
+}
+
+.tea .img-list {
+    width: 100%;
+}
+
+.tea .img-list li {
+    width: 32%;
+    overflow: hidden;
+}
+
+.tea .img-list li:nth-child(even) {
+    margin: 0 2%;
+}
+
+.tea .img-list li img {
+    width: 100%;
+    display: block;
+}
+
+.tea .img-list li img:hover {
+    transform: scale(1.2);
+    transition: all 0.7s;
+}
+
+.tea .btn {
+
+    background-color: rgb(243,130,0);
+    display: inline-block;
+
+    padding: 15px 30px;
+    margin: 50px 0;
+
+
+}
+
+.tea .btn:hover {
+    background-color: chocolate;
+}
+
+.tea .btn a {
+    color: white;
+    text-transform: uppercase;
+    font-family: "merriweather", serif;
+    font-size: 20px;
+}
+ */
+

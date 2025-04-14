@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/** RESET *********************************************************************************/
+/* 단락구분을 위한 주석처리 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    /* 웹기준 브라우저가 기본으로 가지고 있는 폰트 사이즈로 씀 */
+}
+
+/* float 해제하는 가상요소 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/** COMMON(공통 디자인) *************************************************************/
+
+.title {
+
+    font-size: 30px;
+}
+
+
+/* (영역 '내부'에서) 컨텐츠 너비를 잡아주는 공통 클래스 */
+.inner {
+    width: 960px;
+    margin: 0 auto;
+    /* outline: 2px solid crimson; */
+
+}
+
+/** MAIN **************************************************************************/
+/* 상대 경로 내가 작성중인 문서를 기준으로 (../)
+절대 경로 루트파일 (/)  */
+
+body {
+    color: white;
+    background-image: url(../images/bg.jpg);
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/bg-header.jpg);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+header .logo {
+
+    float: left;
+    height: 100px
+        /* header의 height와 동일 */
+    ;
+    /* background-color: yellow; */
+    background-image: url(../images/header-triangle.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    padding-right: 120px;
+    margin-left: 32px;
+}
+
+header .logo a {
+    display: block;
+    margin-top: 30px;
+}
+
+header .gnb {
+    float: right;
+}
+
+header .gnb ul li {
+    display: inline-block;
+    margin-left: 14px;
+    line-height: 100px;
+    position: relative;
+    /* 가상요소 before의 기준! */
+}
+
+header .gnb ul li::before {
+    content: "/";
+    position: absolute;
+    left: -12px;
+}
+
+header .gnb ul li:first-child::before {
+    display: none;
+}
+
+header .gnb ul li a {
+    color: #d9d9d9;
+
+}
+
+header .gnb ul li a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+
+/** SECTION 1 ************************************************************/
+
+section {
+    width: 960px;
+    margin: 0 auto 50px;
+    background: url(../images/bg-triangle.png) no-repeat;
+}
+
+section .about {
+    /* outline: 1px solid rgb(128, 128, 255); */
+    height: 550px;
+    background: url(../images/triangles.png) no-repeat 124px 142px;
+
+    position: relative;
+    /* title 과 .txt-box의 기준 */
+
+    border-bottom: 1px solid silver;
+    margin-bottom: 15px;
+}
+
+section .about .title {
+    position: absolute;
+    right: 170px;
+    top: 145px;
+}
+
+section .about .txt-box {
+    width: 250px;
+    font-size: 14px;
+
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+
+    /* relative는 left top값으로만 설정 가능 */
+}
+
+section .about .txt-box p {
+    margin-bottom: 10px;
+}
+
+section .about .txt-box p:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: yellow;
+}
+
+section .about .txt-box p a {
+    color: white;
+}
+
+section .about .txt-box p a:hover {
+    background-color: white;
+    color: orangered;
+    font-weight: 700;
+}
+
+/** SECTION 2 ************************************************************/
+
+
+section .content .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.box-wrap .box {
+    
+    width: 23%;
+    float: left;
+}
+
+/* 형제요소 선택자 (~) : 첫째 요소를 제외한 나머지 형제요소 선택 */
+.box-wrap .box~.box {
+    margin-left: 24px;
+}
+
+.box-wrap .box img {
+    width: 100%;
+
+}
+
+.box-wrap .box p {
+
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    letter-spacing: -0.6px;
+}
+
+.box-wrap .box p:last-child, .box-wrap .box ul li:last-child {
+    border-bottom: 0;
+    /* or "none" */
+}
+
+.box-wrap .box ul li {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    letter-spacing: -0.6px;
+}
+
+/** FOOTER **********************************************************************/
+
+footer {
+    width: 100%;
+    background-image: url(../images/bg-header.jpg);
+    padding: 20px 0 60px;
+}
+
+footer a {
+    color: silver;
+}
+
+footer a:hover {
+    color: orangered;
+}
+
+footer ul.links {
+    width: 960px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+footer ul li {
+
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+
+    /* 가상요소 기준 */
+
+}
+
+footer ul li:first-child::after {
+    display: none;
+}
+
+footer ul li::after {
+
+    content: "|";
+    display: block;
+   /*  width: 2px;
+    height: 20px; */
+    position: absolute;
+    left: -10px;
+    top: 1px;
+
+    background-color: sliver;
+}
+
+

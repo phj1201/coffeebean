@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/**** HEADER **********************************************************************/
+
+header {
+    
+    width: 100%;
+    background-color: rgba(255, 255, 255,0.9);
+    border-bottom: 1px solid #eee;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: 9999; /* 쌓이는 순서 제일 위로 설정 */
+}
+
+header a {
+    /* header 하위의 모든 a 태그 선택 */
+    color: #333;
+}
+
+header .header-top {
+    width: 100%;
+    background-color: lightgray;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+
+header .header-top ul {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    /* inline-block 적용 후, 상위요소에 align값 적용해야함 */
+}
+
+header .header-top ul li {
+   
+    float: none;
+    /* 속성의 기본값 반응형 웹 구현시 필요 */
+    display: inline-block;
+    margin-left: 10px;
+}
+
+header .header-top ul li a:hover {
+    color: rgb(47,28,17);
+    font-weight: 600;
+}
+
+header .header-top ul li:last-child a {
+
+    width: 60px;
+    height: 40px;
+
+    /*  
+   background-color: rgb(47,28,17);
+   background-image: url(../img/ico_user_info_line.png);
+   background-repeat: no-repeat;
+   background-position: center;  
+   한꺼번에 속성 적용 - background : 색, 이미지, 반복, 위치
+   */
+    /* background: none; */
+
+    background: rgb(47, 28, 17) url(../img/ico_user_info_line.png) no-repeat center;
+
+    text-indent: -9999px;
+    /* block일때는 적용 안됨 */
+    text-align: left;
+
+}
+
+header .header-bottom {
+    
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+header .header-bottom .logo {
+    
+    float: left;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    margin-right: 50px;
+}
+
+header .header-bottom .logo img {
+    height: 70px;
+    display: block;
+}
+
+header .header-bottom .gnb {
+  
+   float: left;
+}
+
+header .header-bottom .gnb ul li {
+    
+    margin: 0 20px;
+}
+
+header .header-bottom .gnb ul li a {
+    color: rgb(47,28,17);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: arial;
+    font-weight: 700;
+    line-height: 100px;
+}
+
+header .header-bottom .gnb ul li.active a {
+    
+}
+
+header .header-bottom .gnb ul li a:hover {
+    color: rgb(207,102,26);
+}
+
+header .header-bottom .search {
+    /* outline: 2px solid rgb(0, 134, 90); */
+    float: right;
+    height: 100px;
+
+}
+
+.search input {
+    height: 30px;
+    border: 0; /* border: none; */
+    outline: 0;
+    margin-top: 35px;
+    vertical-align: middle;
+}
+
+.search input[type="text"] {
+    background-color: rgb(230, 230, 230);
+    border-bottom: 1px #ccc;
+}
+
+.search input[type="submit"] {
+    
+    background-color: transparent;
+    background-image: url(../img/ico_search.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    width: 24px;
+
+    font-size: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+}

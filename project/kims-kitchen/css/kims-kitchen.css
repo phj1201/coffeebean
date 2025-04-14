@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+
+/* ,는 그룹 선택자 */
+    {
+    font-size: 100%;
+    font-weight: normal;
+    /* = 400 */
+}
+
+/* 공통으로 사용할 디자인 */
+/* float 해제를 위한 클래스 */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+.container
+
+/* 가장 상위 요소 (부모) */
+    {
+
+    width: 100%;
+    background-color: rgb(246, 243, 232);
+    padding: 100px 0;
+
+}
+
+.recipe {
+    width: 1280px;
+    /* outline: 3px red solid; */
+    margin: 0 auto;
+}
+
+.recipe .title {
+    /* background-color: lightcyan; */
+    margin-bottom: 50px;
+}
+
+.recipe .title h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.recipe .title p {
+    font-size: 20px;
+    color: #555;
+}
+
+.recipe .content .box {
+    /* outline: 3px solid red; */
+    float: left;
+
+    /* float된 요소가 width값이 설정되지 않았을 경우 
+        내용만큼의 너비width값을 갖는다.
+    */
+
+    /* 
+     1) 전체 공간을 1/4 (여백까지 포함)
+     width: 25%;
+     padding: 0 20px;
+     box-sizing: border-box; 
+    */
+
+    /* 2) 여백을 제외한 너비 설정*/
+    width: 23.5%;
+}
+
+.recipe .content .box ~ .box {
+    margin-left: 2%;
+
+}
+
+.box img {
+    width: 100%;
+    /* px이 아닌 %로 이미지 크기 조절할 것. */
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(43, 43, 43, 0.7);
+}
+
+.box .info { 
+   padding: 0 10px;
+   
+   /* block요소는 부모만큼 너비를 모두 사용하는 것이 기본값 (컨텐츠+패딩+보더)
+   width값을 설정할 경우, 컨텐츠의 너비를 설정하는 것이 되므로 
+   패딩, 보더까지 넣을 경우에는 컨텐츠 너비에 모두 포함되도록 box-sizng이 필요! */
+}
+
+.box .info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.box .info h3 a {
+    color: #333;
+}
+
+.box .info h3 a:hover {
+    color: crimson;
+}
+
+.box .info p {
+    font-size: 18px;
+    color: #666
+}
